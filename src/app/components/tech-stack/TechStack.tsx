@@ -1,7 +1,7 @@
 
 export default function TechStack() {
   return (
-    <div>
+    <div id="services-tech-stack">
       Services and Tech Section
     </div>
   )
