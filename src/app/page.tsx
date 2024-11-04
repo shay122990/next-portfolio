@@ -4,7 +4,6 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import TechStack from "./components/tech-stack/TechStack";
 import Contact from "./components/contact/Contact";
-
 export default function Home() {
   return (
     <>

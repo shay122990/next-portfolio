@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4 border-b border-gray-300 bg-white dark:bg-gray-900">
+    <nav className="relative flex items-center justify-between p-4 border-b">
       <div className="flex-1 flex ">
         <Image src="/images/logo.gif" width={50} height={50} alt="logo image" />
       </div>
