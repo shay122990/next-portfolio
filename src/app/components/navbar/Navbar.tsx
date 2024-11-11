@@ -1,66 +1,67 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
+"use client"
 import Link from "next/link";
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
-const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const links = [
+    { id: 1, link: "home" },
+    { id: 2, link: "about" },
+    { id: 3, link: "portfolio" },
+    { id: 4, link: "experience" },
+    { id: 5, link: "contact" },
+  ];
 
   return (
-    <nav className="relative flex items-center justify-between p-4 border-b">
-      <div className="flex-1 flex ">
-        <Image src="/images/logo.gif" width={50} height={50} alt="logo image" />
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+      <div className="ml-2">
+        <Link href="/">
+          <Image
+            src="/images/logo.gif" 
+            alt="Logo"
+            width={50}
+            height={50}
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
 
-      <button
-        onClick={toggleMenu}
-        className="md:hidden text-gray-800 dark:text-white ml-auto" 
-        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-      >
-        {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
-      </button>
+      <ul className="hidden md:flex">
+        {links.map(({ id, link }) => (
+          <li
+            key={id}
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+          >
+            <Link href={`#${link}`}>{link}</Link>
+          </li>
+        ))}
+      </ul>
 
       <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } fixed top-0 right-0 w-2/3 h-full bg-white dark:bg-gray-900 transform transition-transform duration-300 ease-in-out md:static md:flex md:items-center md:w-auto md:block`}
-        style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}
+        onClick={() => setNav(!nav)}
+        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
       >
-        {isMenuOpen && (
-          <button onClick={toggleMenu} className="absolute top-4 left-4 text-gray-800 dark:text-white" aria-label="Close Menu">
-            <FaTimes className="text-2xl" />
-          </button>
-        )}
-        
-        <div className="flex flex-col items-end p-4 md:p-0 md:flex-row md:space-x-6 md:text-gray-800 md:dark:text-white">
-          <ul className="flex flex-col md:flex-row md:space-x-6 md:text-gray-800 md:dark:text-white">
-            <li className="p-2">
-              <Link href="#about">About</Link>
-            </li>
-            <li className="p-2">
-              <Link href="#projects">Projects</Link>
-            </li>
-            <li className="p-2">
-              <Link href="#services-tech-stack">Services</Link>
-            </li>
-            <li className="p-2">
-              <Link href="#contact">Contact</Link>
-            </li>
-            <li className="p-2">
-              <Link href="https://github.com/shay122990" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
-                <FaGithub className="w-6 h-6 text-gray-800 dark:text-white" />
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
+
+      {nav && (
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          {links.map(({ id, link }) => (
+            <li
+              key={id}
+              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+            >
+              <Link onClick={() => setNav(!nav)} href={`#${link}`}>
+                {link}
               </Link>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 
