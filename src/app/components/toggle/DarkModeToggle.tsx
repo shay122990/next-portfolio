@@ -1,11 +1,37 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export const DarkModeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    // Set the initial theme based on the stored preference or default to light mode
+    const storedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(storedMode);
+    document.documentElement.style.setProperty(
+      "--background",
+      storedMode ? "#282828" : "#ebebeb"
+    );
+    document.documentElement.style.setProperty(
+      "--foreground",
+      storedMode ? "#ededed" : "#282828"
+    );
+  }, []);
+
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    // Update CSS variables for theme colors
+    document.documentElement.style.setProperty(
+      "--background",
+      newMode ? "#282828" : "#ebebeb"
+    );
+    document.documentElement.style.setProperty(
+      "--foreground",
+      newMode ? "#ededed" : "#282828"
+    );
+    // Store the preference in local storage
+    localStorage.setItem("darkMode", JSON.stringify(newMode));
   };
 
   return (
