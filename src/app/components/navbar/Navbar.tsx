@@ -62,7 +62,7 @@ const Navbar = () => {
             alt="Logo"
             width={50}
             height={50}
-            className="cursor-pointer"
+            className="cursor-pointer ml-10"
           />
         </Link>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="md:hidden flex-1 flex justify-center">
+      <div className="md:hidden flex-1 flex justify-center ml-10">
         <Link href="/">
           <Image
             src="/images/logo.gif"
