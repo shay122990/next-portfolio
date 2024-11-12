@@ -9,7 +9,7 @@ export const DarkModeToggle: React.FC = () => {
   };
 
   return (
-    <div className={`flex items-center ${darkMode ? "bg-gray-900" : "bg-white"}`}>
+    <div className="flex items-center bg-transparent">
       <input
         type="checkbox"
         id="dark-mode-toggle"
