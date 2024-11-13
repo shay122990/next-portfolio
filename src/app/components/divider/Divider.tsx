@@ -9,7 +9,7 @@ interface DividerProps {
         <span id={id} className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-500 dark:text-white sm:w-1/4 lg:w-1/5">
           {text}
         </span>
-        <hr className="w-3/5 sm:w-3/4 lg:w-7/10 border-t-2 border-gray-500 dark:border-white" />
+        <hr className="divider-line" />
       </div>
     );
   };

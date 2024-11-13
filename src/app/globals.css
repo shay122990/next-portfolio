@@ -40,3 +40,10 @@ body {
   background-color: var(--background-light);
   color: var(--foreground-light);
 }
+
+.divider-line {
+  width: 60%;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #14b8a6); 
+}
