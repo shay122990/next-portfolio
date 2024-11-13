@@ -1,8 +1,8 @@
-
+import Divider from "../divider/Divider"
 export default function TechStack() {
   return (
-    <div id="services-tech-stack">
-      Services and Tech Section
-    </div>
+    <section className="w-full">
+      <Divider text="Experience" id="projects-section" />
+    </section>
   )
 }

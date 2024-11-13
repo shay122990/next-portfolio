@@ -1,8 +1,12 @@
+import Divider from '../divider/Divider';
 
-export default function About() {
+const About = () => {
   return (
-    <div id="about">
-      About section
-    </div>
-  )
-}
+    <section id="about" className="w-full">
+      <Divider text="About Me" id="about-section" />
+      <p>Some content.</p>
+    </section>
+  );
+};
+
+export default About;

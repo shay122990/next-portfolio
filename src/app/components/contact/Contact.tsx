@@ -1,8 +1,8 @@
-
+import Divider from "../divider/Divider"
 export default function Contact() {
   return (
-    <div id="contact">
-      Contact section
-    </div>
+    <section className="w-full">
+      <Divider text="Get in touch" id="contact-section" />
+    </section>
   )
 }
