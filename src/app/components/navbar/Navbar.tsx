@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 dark:bg-grey dark:text-white border-b border-lime-400 fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 dark:bg-grey dark:text-white border-b border-lime-400">
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden hover:text-lime-500"
