@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const leftLinks: NavLink[] = [
     { id: 1, link: "about" },
-    { id: 2, link: "portfolio" },
+    { id: 2, link: "projects" },
     {
       id: 3,
       link: "https://github.com/shay122990",
