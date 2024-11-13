@@ -30,12 +30,16 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 dark:bg-grey dark:text-white  border-b border-lime-400 fixed">
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden hover:text-lime-500"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? (
+          <FaTimes size={30} className="dark:text-white text-gray-800" />
+        ) : (
+          <FaBars size={30} className="dark:text-white text-gray-800" />
+        )}
       </div>
 
       <div className="hidden md:flex w-full justify-between items-center">
@@ -43,7 +47,7 @@ const Navbar = () => {
           {leftLinks.map(({ id, link, icon }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
             >
               {icon ? (
                 <a href={link} target="_blank" rel="noreferrer">
@@ -70,7 +74,7 @@ const Navbar = () => {
           {rightLinks.map(({ id, link }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
             >
               <Link href={`#${link}`}>{link}</Link>
             </li>

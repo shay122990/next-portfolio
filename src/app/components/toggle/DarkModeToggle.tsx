@@ -7,9 +7,10 @@ export const DarkModeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(theme === "dark");
+    if (theme !== undefined) {
+      setIsDark(theme === "dark");
+    }
   }, [theme]);
-
   const toggleTheme = () => {
     const newTheme = isDark ? "light" : "dark";
     setTheme(newTheme);
