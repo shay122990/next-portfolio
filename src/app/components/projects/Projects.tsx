@@ -6,7 +6,6 @@ export default function Projects() {
     <section className="w-full py-10">
       <Divider text="Projects" id="projects" />
 
-      {/* Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <PolaroidCard
           imageSrc="/images/hero-image.jpg"
