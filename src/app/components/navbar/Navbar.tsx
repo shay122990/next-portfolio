@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 dark:bg-grey dark:text-white border-b border-lime-400">
+    <div className="flex justify-between items-center w-full h-15 md:h-30  mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-lime-400">
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden hover:text-lime-500"
@@ -64,8 +64,8 @@ const Navbar = () => {
           <Image
             src="/images/logo.gif"
             alt="Logo"
-            width={50}
-            height={50}
+            width={70}
+            height={70}
             className="cursor-pointer ml-10"
           />
         </Link>
