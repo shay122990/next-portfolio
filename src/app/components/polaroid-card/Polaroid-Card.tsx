@@ -26,29 +26,30 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           className="w-full h-auto rounded-lg mb-2 border-4 border-white"
         />
       </div>
+      <div className="bg-slate-200 border border-gray-300 mx-1">
+        <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
+          {projectName}
+        </h3>
 
-      <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
-        {projectName}
-      </h3>
-
-      <div className="flex justify-center space-x-4">
-        <a
-          href={liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-lime-500 transition duration-200"
-        >
-          Live
-        </a>
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-lime-500 transition duration-200"
-        >
-          GitHub
-        </a>
-      </div>
+        <div className="flex justify-center space-x-4">
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-lime-500 transition duration-200"
+          >
+            Live
+          </a>
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-lime-500 transition duration-200"
+          >
+            GitHub
+          </a>
+        </div>
+        </div>
     </div>
   );
 };

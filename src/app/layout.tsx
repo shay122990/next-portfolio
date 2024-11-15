@@ -1,9 +1,9 @@
+import "./globals.css";
 import { Providers } from "./providers";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Coda } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const coda = Coda({ subsets: ["latin"],  weight: ['400'], });
 
 export const metadata: Metadata = {
   title: "Shay Asanova",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={coda.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
