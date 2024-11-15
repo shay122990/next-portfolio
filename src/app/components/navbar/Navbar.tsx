@@ -36,7 +36,7 @@ const Navbar = () => {
         className="cursor-pointer z-10 text-white md:hidden hover:text-lime-500"
       >
         {nav ? (
-          <FaTimes size={30} className="dark:text-white text-gray-800" />
+          <FaTimes size={30} className="dark:text-white" />
         ) : (
           <FaBars size={30} className="dark:text-white text-gray-800" />
         )}
@@ -99,7 +99,7 @@ const Navbar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-gray-800 text-white">
           {[...leftLinks, ...rightLinks].map(({ id, link, icon }) => (
             <li
               key={id}
