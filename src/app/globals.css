@@ -9,41 +9,25 @@
   --foreground-dark: #ededed;
 }
 
-/* Dark Mode Variables */
-[data-theme="dark"] {
-  --background: var(--background-dark);
-  --foreground: var(--foreground-dark);
-}
-
+/* Theme Colors */
 [data-theme="light"] {
   --background: var(--background-light);
   --foreground: var(--foreground-light);
+  --background-image: url("data:image/svg+xml,<your-light-svg-here>");
 }
 
+[data-theme="dark"] {
+  --background: var(--background-dark);
+  --foreground: var(--foreground-dark);
+  --background-image: url("data:image/svg+xml,<your-dark-svg-here>");
+}
+
+/* Global Background and Foreground */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans, sans-serif);
-}
-
-html,
-body {
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dark {
-  background-color: var(--background-dark);
-  color: var(--foreground-dark);
-}
-
-.light {
-  background-color: var(--background-light);
-  color: var(--foreground-light);
-}
-
-.divider-line {
-  width: 60%;
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #3b82f6, #14b8a6); 
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: var(--background-image);
 }
