@@ -47,3 +47,27 @@ body {
   height: 2px;
   background: linear-gradient(to right, #3b82f6, #14b8a6);
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 50s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .logo-size {
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-size {
+    height: 80px;
+  }
+}
