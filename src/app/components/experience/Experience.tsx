@@ -1,6 +1,6 @@
 import Divider from "../divider/Divider"
 import LogoBanner from "../logo-banner/LogoBanner"
-import ExperienceCategories from "../experience-categoried/ExperienceCategories"
+import ExperienceCategories from "../experience-categories/ExperienceCategories"
 export default function Experience() {
   return (
     <section className="w-full h-100">

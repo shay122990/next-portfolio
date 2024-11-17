@@ -1,8 +1,8 @@
-import img1 from "../../public/images/tech1.jpg";
-import img2 from "../../public/images/tech1.jpg";
-import img3 from "../../public/images/tech1.jpg";
-import img5 from "../../public/images/tech1.jpg";
-import img6 from "../../public/images/tech1.jpg";
+import img1 from "../../../public/images/tech1.jpg";
+import img2 from "../../../public/images/tech1.jpg";
+import img3 from "../../../public/images/tech1.jpg";
+import img5 from "../../../public/images/tech1.jpg";
+import img6 from "../../../public/images/tech1.jpg";
 
 const servicesData = {
   WebDevelopment: [
