@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
-import servicesData from "@/app/tech-stack-data"; 
+import servicesData from "@/app/page-data/tech-stack-data"; 
 
 type ServiceCategory = keyof typeof servicesData;
 

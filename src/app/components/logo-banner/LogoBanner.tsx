@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logos from "@/app/tech-icons";
+import logos from "@/app/page-data/tech-icons";
 
 export default function LogoBanner() {
   return (
