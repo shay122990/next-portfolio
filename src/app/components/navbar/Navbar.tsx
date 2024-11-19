@@ -38,7 +38,7 @@ const Navbar = () => {
         {nav ? (
           <FaTimes size={30} className="dark:text-white" />
         ) : (
-          <FaBars size={30} className="dark:text-white text-gray-800" />
+          <FaBars size={30} className="dark:text-white text-gray-500" />
         )}
       </div>
 
