@@ -30,10 +30,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-lime-400">
+    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500">
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer z-10 text-white md:hidden hover:text-lime-500"
+        className="cursor-pointer z-10 text-white md:hidden hover:text-green-500"
       >
         {nav ? (
           <FaTimes size={30} className="dark:text-white" />
@@ -47,7 +47,7 @@ const Navbar = () => {
           {leftLinks.map(({ id, link, icon }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 duration-200 link-underline"
             >
               {icon ? (
                 <a href={link} target="_blank" rel="noreferrer">
@@ -74,7 +74,7 @@ const Navbar = () => {
           {rightLinks.map(({ id, link }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-lime-400 duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 duration-200 link-underline"
             >
               <Link href={`#${link}`}>{link}</Link>
             </li>
@@ -99,7 +99,10 @@ const Navbar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-gray-800 text-white">
+        <ul style={{
+          background: 'linear-gradient(to right, #3b82f6, #14b8a6)',
+          }}
+          className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full text-white">
           {[...leftLinks, ...rightLinks].map(({ id, link, icon }) => (
             <li
               key={id}
