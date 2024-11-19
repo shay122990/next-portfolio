@@ -12,7 +12,7 @@ export default function Hero() {
           alt="developer image"
           width={200} 
           height={200} 
-          className="rounded-2xl shadow-lg shadow-pink-400/50  md:w-[280px] md:h-[300px] lg:w-[400px] lg:h-[500px]"
+          className="rounded-2xl shadow-lg shadow-pink-400/50  md:w-[250px] md:h-[300px] lg:w-[400px] lg:h-[500px]"
         />
       </div>
     </div>
