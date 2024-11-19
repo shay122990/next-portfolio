@@ -29,7 +29,7 @@ export const DarkModeToggle: React.FC = () => {
       <label
         htmlFor="dark-mode-toggle"
         className={`relative w-16 h-8 block rounded-full cursor-pointer transition-all duration-300 shadow-inner ${
-          isDark ? "bg-gray-300" : "bg-gray-500"
+          isDark ? "bg-white" : "bg-gray-300"
         }`}
       >
         <span
