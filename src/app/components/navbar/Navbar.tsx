@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
@@ -30,10 +30,11 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500">
+    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative">
+      {/* Hamburger Icon */}
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer z-10 text-white md:hidden hover:text-green-500"
+        className="cursor-pointer z-10 text-white md:hidden "
       >
         {nav ? (
           <FaTimes size={30} className="dark:text-white" />
@@ -42,6 +43,7 @@ const Navbar = () => {
         )}
       </div>
 
+      {/* Desktop Navigation */}
       <div className="hidden md:flex w-full justify-between items-center">
         <ul className="flex space-x-4">
           {leftLinks.map(({ id, link, icon }) => (
@@ -83,6 +85,7 @@ const Navbar = () => {
         </ul>
       </div>
 
+      {/* Mobile Logo */}
       <div className="md:hidden flex-1 flex justify-center ml-10">
         <Link href="/">
           <Image
@@ -98,34 +101,28 @@ const Navbar = () => {
         <DarkModeToggle />
       </div>
 
-      {nav && (
-        <ul style={{
-          background: 'linear-gradient(to right, #3b82f6, #14b8a6)',
-          }}
-          className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full text-white">
-          {[...leftLinks, ...rightLinks].map(({ id, link, icon }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
-              {icon ? (
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setNav(!nav)}
-                >
-                  {icon}
-                </a>
-              ) : (
-                <Link onClick={() => setNav(!nav)} href={`#${link}`}>
-                  {link}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-      )}
+      {/* Mobile Navigation */}
+      <ul
+        className={`absolute -top-2 left-0 w-full h-dvh  flex flex-col justify-center items-center text-white bg-gradient-to-r from-blue-500 to-teal-400 transform ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        {[...leftLinks, ...rightLinks].map(({ id, link, icon }) => (
+          <li
+            key={id}
+            className="px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-105"
+            onClick={() => setNav(!nav)}
+          >
+            {icon ? (
+              <a href={link} target="_blank" rel="noreferrer">
+                {icon}
+              </a>
+            ) : (
+              <Link href={`#${link}`}>{link}</Link>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
