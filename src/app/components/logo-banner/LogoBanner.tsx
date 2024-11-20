@@ -12,8 +12,8 @@ export default function LogoBanner() {
                 <Image
                   src={imageUrl}
                   alt={`Logo ${id}`}
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                   className="object-contain logo-size"
                 />
               </div>
