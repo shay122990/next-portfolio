@@ -1,9 +1,16 @@
-"use client"; 
+"use client";
 
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-grey border-t border-lime-400 py-6">
       <div className="container mx-auto text-center">
@@ -28,7 +35,8 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-sm text-grey dark:text-white">
-          © Shay Development <span>{new Date().getFullYear()}</span>.
+          © Shay Development{" "}
+          <span>{currentYear ?? "..."}</span>. 
         </p>
         <p className="text-sm text-grey dark:text-white">Dubai, UAE</p>
       </div>
