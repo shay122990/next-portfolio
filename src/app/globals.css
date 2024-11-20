@@ -40,6 +40,40 @@ body {
   background-color: var(--background-light);
   color: var(--foreground-light);
 }
+/* Nav Component  */
+@media (min-width: 768px) {
+  .logo-size {
+    height: 50px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-size {
+    height: 60px;
+    width: auto;
+  }
+}
+/* hero component */
+@media (max-width: 768px) {
+  .hero-image {
+    width: 200px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .hero-image {
+    width: 220px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    width: 400px;
+    height: auto;
+  }
+}
 /* Divider Component */
 .divider-line {
   width: 60%;
@@ -60,18 +94,4 @@ body {
 
 .animate-scroll {
   animation: scroll 50s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .logo-size {
-    height: 40px;
-    width: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .logo-size {
-    height: 60px;
-    width: auto;
-  }
 }

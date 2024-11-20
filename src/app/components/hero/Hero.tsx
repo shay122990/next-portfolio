@@ -10,9 +10,9 @@ export default function Hero() {
         <Image
           src="/images/hero-image.jpg"
           alt="developer image"
-          width={200} 
-          height={200} 
-          className="rounded-2xl shadow-lg shadow-pink-400/50  md:w-[250px] md:h-[300px] lg:w-[400px] lg:h-[500px]"
+          width={100} 
+          height={100}
+          className="rounded-2xl shadow-lg shadow-pink-400/50 hero-image"
         />
       </div>
     </div>
