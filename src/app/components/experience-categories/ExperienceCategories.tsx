@@ -13,23 +13,22 @@ export default function ExperienceCategories() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="flex space-x-4 border-b-2 mb-6">
-        {Object.keys(servicesData).map((tab) => (
-          <button
-            key={tab}
-            className={`py-2 px-4 text-lg font-semibold ${
-              activeTab === tab
-                ? "border-b-4 border-blue-500 text-blue-500"
-                : "text-gray-600 hover:text-blue-500"
-            }`}
-            onClick={() => handleTabClick(tab as ServiceCategory)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
+    <div className="w-full h-full max-w-4xl mx-auto">
+     <div className="flex place-content-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16">
+      {Object.keys(servicesData).map((tab) => (
+        <button
+          key={tab}
+          className={`py-2 px-6 text-lg ${
+            activeTab === tab
+              ? "border-2 border-green-500"
+              : "text-gray-600 hover:text-green-500"
+          } md:px-8 lg:px-10`}
+          onClick={() => handleTabClick(tab as ServiceCategory)}
+        >
+          {tab}
+        </button>
+      ))}
+    </div>
       <div>
         {servicesData[activeTab].map(({ id, paragraph, image }) => (
           <div key={id} className="flex mb-8 space-x-6">
