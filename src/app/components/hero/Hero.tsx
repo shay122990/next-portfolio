@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="flex flex-row lg:flex-row justify-between items-center bg-gradient-to-br from-blue-700 to-teal-400 w-full h-80 lg:h-[35rem] px-4 lg:px-20 overflow-visible mt-0 lg:mt-8">
+    <div className="flex flex-row lg:flex-row justify-between items-center bg-gradient-to-br from-blue-700 to-teal-400 w-full h-80 lg:h-[35rem] px-4 lg:px-20 overflow-visible mt-1 lg:mt-8">
       <motion.h1
-        className="text-white text-sm sm:text-xl lg:text-4xl font-semibold lg:w-1/2 lg:text-left"
+        className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold lg:w-1/2 lg:text-left"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
