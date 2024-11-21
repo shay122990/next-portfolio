@@ -90,7 +90,7 @@ export default function EmailForm() {
           id="name"
           value={formData.name}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
         />
       </div>
@@ -105,7 +105,7 @@ export default function EmailForm() {
           id="email"
           value={formData.email}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
         />
       </div>
@@ -120,7 +120,7 @@ export default function EmailForm() {
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
         ></textarea>
       </div>
@@ -128,8 +128,8 @@ export default function EmailForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full p-2 bg-blue-500 text-white rounded-md font-semibold ${
-          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
+        className={`w-full p-2 bg-white border border-gray-200 text-gray-500 rounded-md font-semibold ${
+          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200 hover:border hover:border-green-500"
         }`}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
