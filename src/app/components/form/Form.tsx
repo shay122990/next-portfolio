@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useState } from "react";
 import { send } from "@emailjs/browser";
 
@@ -46,12 +45,15 @@ export default function EmailForm() {
         "3VxZ2XS6rmTPLzTwV" 
       );
 
-      setSubmissionMessage("Your message was sent successfully!");
+      setSubmissionMessage("Your message was sent successfully! I will get back to you shortly.");
       setMessageType("success");
       setFormData({ name: "", email: "", message: "" }); 
     } catch (error) {
       console.error("EmailJS error:", error);
-      setSubmissionMessage("Failed to send the message. Please try again.");
+      setSubmissionMessage(
+        "Error sending a message, please try again or reach out to me through " +
+        '<a href="mailto:shay.asanova@gmail.com" class="text-green-500">shay.asanova@gmail.com</a>'
+      );
       setMessageType("error");
     }
 
@@ -75,9 +77,8 @@ export default function EmailForm() {
           className={`mb-4 p-3 rounded-md ${
             messageType === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
           }`}
-        >
-          {submissionMessage}
-        </div>
+          dangerouslySetInnerHTML={{ __html: submissionMessage }}
+        />
       )}
 
       <div className="mb-4">
