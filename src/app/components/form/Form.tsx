@@ -1,9 +1,10 @@
-"use client"
-
-import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+"use client";
+import { useState, useId } from "react";
+import { send } from "@emailjs/browser";
 
 export default function EmailForm() {
+  const uniqueId = useId(); 
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,20 +14,6 @@ export default function EmailForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState("");
   const [messageType, setMessageType] = useState<"success" | "error" | null>(null);
-
-  const [uniqueIds, setUniqueIds] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  useEffect(() => {
-    setUniqueIds({
-      name: `name-${uuidv4()}`,
-      email: `email-${uuidv4()}`,
-      message: `message-${uuidv4()}`,
-    });
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -38,14 +25,36 @@ export default function EmailForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmissionMessage("All fields are required.");
+      setMessageType("error");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      setSubmissionMessage("Your message was sent successfully!");
+      await send(
+        "service_82ksbfh",
+        "template_fpy8vcm",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "3VxZ2XS6rmTPLzTwV"
+      );
+
+      setSubmissionMessage("Your message was sent successfully! I will get back to you shortly.");
       setMessageType("success");
       setFormData({ name: "", email: "", message: "" });
-    } catch {
-      setSubmissionMessage("Failed to send the message. Please try again.");
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSubmissionMessage(
+        "Error sending a message, please try again or reach out to me through " +
+          '<a href="mailto:shay.asanova@gmail.com" class="text-green-500">shay.asanova@gmail.com</a>'
+      );
       setMessageType("error");
     }
 
@@ -69,19 +78,18 @@ export default function EmailForm() {
           className={`mb-4 p-3 rounded-md ${
             messageType === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
           }`}
-        >
-          {submissionMessage}
-        </div>
+          dangerouslySetInnerHTML={{ __html: submissionMessage }}
+        />
       )}
 
       <div className="mb-4">
-        <label htmlFor={uniqueIds.name} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`name-${uniqueId}`} className="block text-sm font-medium text-gray-700">
           Name
         </label>
         <input
           type="text"
           name="name"
-          id={uniqueIds.name}
+          id={`name-${uniqueId}`}
           value={formData.name}
           onChange={handleChange}
           className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -91,13 +99,13 @@ export default function EmailForm() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor={uniqueIds.email} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`email-${uniqueId}`} className="block text-sm font-medium text-gray-700">
           Email
         </label>
         <input
           type="email"
           name="email"
-          id={uniqueIds.email}
+          id={`email-${uniqueId}`}
           value={formData.email}
           onChange={handleChange}
           className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -107,12 +115,12 @@ export default function EmailForm() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor={uniqueIds.message} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`message-${uniqueId}`} className="block text-sm font-medium text-gray-700">
           Message
         </label>
         <textarea
           name="message"
-          id={uniqueIds.message}
+          id={`message-${uniqueId}`}
           rows={4}
           value={formData.message}
           onChange={handleChange}
