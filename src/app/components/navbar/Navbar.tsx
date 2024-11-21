@@ -71,6 +71,7 @@ const Navbar = () => {
             width={70}
             height={70}
             className="cursor-pointer ml-10"
+            priority
           />
         </Link>
 

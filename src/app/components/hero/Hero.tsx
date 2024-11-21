@@ -26,6 +26,7 @@ export default function Hero() {
           width={500}
           height={500}
           className="rounded-2xl shadow-lg shadow-pink-400/50 hero-image"
+          priority
         />
       </motion.div>
     </div>
