@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { TiTimesOutline, TiThMenuOutline } from "react-icons/ti";
+
 import Image from "next/image";
 import { DarkModeToggle } from "../toggle/DarkModeToggle";
 
@@ -37,9 +39,9 @@ const Navbar = () => {
         className="cursor-pointer z-10 text-white md:hidden "
       >
         {nav ? (
-          <FaTimes size={30} className="dark:text-white" />
+          <TiTimesOutline size={30} className="dark:text-white" />
         ) : (
-          <FaBars size={30} className="dark:text-white text-gray-500" />
+          <TiThMenuOutline size={30} className="dark:text-white text-gray-500" />
         )}
       </div>
 
