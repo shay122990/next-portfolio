@@ -2,7 +2,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { TiTimesOutline, TiThMenuOutline } from "react-icons/ti";
+import { FaTimes } from "react-icons/fa";
+import { TiThMenu } from "react-icons/ti";
+
+
 
 import Image from "next/image";
 import { DarkModeToggle } from "../toggle/DarkModeToggle";
@@ -11,6 +14,7 @@ type NavLink = {
   id: number;
   link: string;
   icon?: JSX.Element;
+  label?: string; 
 };
 
 const Navbar = () => {
@@ -23,6 +27,7 @@ const Navbar = () => {
       id: 3,
       link: "https://github.com/shay122990",
       icon: <FaGithub size={24} />,
+      label: "GitHub Profile", 
     },
   ];
 
@@ -33,28 +38,33 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative">
-      {/* Hamburger Icon */}
+      {/* Mobile Menu Icons */}
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden "
       >
         {nav ? (
-          <TiTimesOutline size={30} className="dark:text-white" />
+          <FaTimes size={30} className="dark:text-white" />
         ) : (
-          <TiThMenuOutline size={30} className="dark:text-white text-gray-500" />
+          <TiThMenu size={30} className="dark:text-white text-gray-500" />
         )}
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex w-full justify-between items-center">
         <ul className="flex space-x-4">
-          {leftLinks.map(({ id, link, icon }) => (
+          {leftLinks.map(({ id, link, icon, label }) => (
             <li
               key={id}
               className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 duration-200 link-underline"
             >
               {icon ? (
-                <a href={link} target="_blank" rel="noreferrer">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                >
                   {icon}
                 </a>
               ) : (
@@ -110,14 +120,19 @@ const Navbar = () => {
           nav ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        {[...leftLinks, ...rightLinks].map(({ id, link, icon }) => (
+        {[...leftLinks, ...rightLinks].map(({ id, link, icon, label }) => (
           <li
             key={id}
             className="px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-105"
             onClick={() => setNav(!nav)}
           >
             {icon ? (
-              <a href={link} target="_blank" rel="noreferrer">
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label} 
+              >
                 {icon}
               </a>
             ) : (
