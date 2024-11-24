@@ -69,9 +69,9 @@ export default function EmailForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-md"
+      className="max-w-lg mx-auto p-6 dark:bg-grey shadow-lg rounded-md border"
     >
-      <h2 className="text-2xl font-semibold mb-6 text-center">Contact Us</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700 dark:text-white">Contact Me</h2>
 
       {submissionMessage && messageType && (
         <div
@@ -83,7 +83,7 @@ export default function EmailForm() {
       )}
 
       <div className="mb-4">
-        <label htmlFor={`name-${uniqueId}`} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`name-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
           Name
         </label>
         <input
@@ -92,14 +92,14 @@ export default function EmailForm() {
           id={`name-${uniqueId}`}
           value={formData.name}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="mt-1 p-2 w-full border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
           autoComplete="name"
         />
       </div>
 
       <div className="mb-4">
-        <label htmlFor={`email-${uniqueId}`} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`email-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
           Email
         </label>
         <input
@@ -108,14 +108,14 @@ export default function EmailForm() {
           id={`email-${uniqueId}`}
           value={formData.email}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="mt-1 p-2 w-full border border-gray-300 bg-white  text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
           autoComplete="email"
         />
       </div>
 
       <div className="mb-4">
-        <label htmlFor={`message-${uniqueId}`} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={`message-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
           Message
         </label>
         <textarea
@@ -124,7 +124,7 @@ export default function EmailForm() {
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="mt-1 p-2 w-full border border-gray-300 bg-white   text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           required
           autoComplete="off"
         ></textarea>
@@ -133,8 +133,8 @@ export default function EmailForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full p-2 bg-green-500 text-white rounded-md font-semibold ${
-          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
+        className={`w-full p-2 bg-white text-gray-700 border rounded-md font-semibold ${
+          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:border-green-500 "
         }`}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
