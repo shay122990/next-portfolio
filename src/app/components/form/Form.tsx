@@ -69,7 +69,7 @@ export default function EmailForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto p-6 dark:bg-grey shadow-lg rounded-md border"
+      className="max-w-lg w-full mx-auto p-6 dark:bg-grey shadow-lg rounded-md border"
     >
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700 dark:text-white">Contact Me</h2>
 
