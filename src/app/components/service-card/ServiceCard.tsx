@@ -1,25 +1,22 @@
-import Image,  { StaticImageData }  from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 type ServiceCardProps = {
-    id: number;
-    paragraph: string;
-    image: string | StaticImageData;
-  };
-  
-  const ServiceCard = ({ id, paragraph, image,  }: ServiceCardProps) => {
-    return (
-      <div key={id} className="flex mb-8 space-x-6 px-10 py-4 md:items-center">
-        <div className="flex-shrink-0">
-          <Image
-            src={image}
-            alt={`Tech Image ${id}`}
-            className="h-40 w-48 md:w-auto md:h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div>
-          <p className="text-gray-700 w-full md:w-3/5">{paragraph}</p>
-        </div>
-      </div>
-    );
-  };
-export default ServiceCard  
+  id: number;
+  paragraph: string;
+  image: string | StaticImageData;
+};
+
+const ServiceCard = ({ id, paragraph, image }: ServiceCardProps) => {
+  return (
+    <div className="flex flex-col items-center text-center bg-white shadow-md rounded-lg p-4">
+      <Image
+        src={image}
+        alt={`Tech Image ${id}`}
+        className="h-40 w-40 object-cover rounded-md"
+      />
+      <p className="text-gray-700 mt-4">{paragraph}</p>
+    </div>
+  );
+};
+
+export default ServiceCard;
