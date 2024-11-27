@@ -1,9 +1,12 @@
 "use client";
 import { useState, useId } from "react";
 import { send } from "@emailjs/browser";
+import FormInput from "../form-input/FormInput";
+import FormTextarea from "../form-textarea/FormTextarea";
+import MessageDisplay from "../message-display/MessageDisplay";
 
 export default function EmailForm() {
-  const uniqueId = useId(); 
+  const uniqueId = useId();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -46,7 +49,7 @@ export default function EmailForm() {
         "3VxZ2XS6rmTPLzTwV"
       );
 
-      setSubmissionMessage("Your message was sent successfully! I will get back to you shortly.");
+      setSubmissionMessage("Your message was sent successfully!");
       setMessageType("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -73,62 +76,31 @@ export default function EmailForm() {
     >
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700 dark:text-white">Contact Me</h2>
 
-      {submissionMessage && messageType && (
-        <div
-          className={`mb-4 p-3 rounded-md ${
-            messageType === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
-          }`}
-          dangerouslySetInnerHTML={{ __html: submissionMessage }}
-        />
-      )}
+      {submissionMessage && messageType && <MessageDisplay message={submissionMessage} type={messageType} />}
 
-      <div className="mb-4">
-        <label htmlFor={`name-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
-          Name
-        </label>
-        <input
-          type="text"
-          name="name"
-          id={`name-${uniqueId}`}
-          value={formData.name}
-          onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-          required
-          autoComplete="name"
-        />
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor={`email-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
-          Email
-        </label>
-        <input
-          type="email"
-          name="email"
-          id={`email-${uniqueId}`}
-          value={formData.email}
-          onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 bg-white  text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-          required
-          autoComplete="email"
-        />
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor={`message-${uniqueId}`} className="block text-sm font-medium text-gray-700 dark:text-white">
-          Message
-        </label>
-        <textarea
-          name="message"
-          id={`message-${uniqueId}`}
-          rows={4}
-          value={formData.message}
-          onChange={handleChange}
-          className="mt-1 p-2 w-full border border-gray-300 bg-white   text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-          required
-          autoComplete="off"
-        ></textarea>
-      </div>
+      <FormInput
+        label="Name"
+        name="name"
+        type="text"
+        value={formData.name}
+        onChange={handleChange}
+        uniqueId={uniqueId}
+      />
+      <FormInput
+        label="Email"
+        name="email"
+        type="email"
+        value={formData.email}
+        onChange={handleChange}
+        uniqueId={uniqueId}
+      />
+      <FormTextarea
+        label="Message"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        uniqueId={uniqueId}
+      />
 
       <button
         type="submit"
