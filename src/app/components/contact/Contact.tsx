@@ -9,10 +9,8 @@ export default function Contact() {
         <div className="flex flex-col justify-center items-center xsm: text-center sm:text-center md:text-left">
           <h2 className="text-xl font-semibold mb-4 w-96">Let&apos;s Grab a Coffee! ☕️</h2>
           <p className="dark:text-green-400 items-center w-96">
-            I&apos;m excited to collaborate with you on
-            your project and contributing to your organization&apos;s success. Let&apos;s connect
-            and discuss how I can bring that vision to life. <br /> Please fill
-            out the form below, and I&apos;ll be in touch shortly.
+           I’m excited to bring creative ideas and solutions to life! Whether you’re a company looking for someone passionate and skilled, or an individual with a vision for your next project, I’d love to connect. 
+           <br /> Fill out the form, and I’ll get back to you promptly. Let’s make something incredible happen together! 
           </p>
         </div>
         <div className="flex flex-1 justify-center items-center">
