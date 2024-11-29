@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Project Name**: Portfolio Website
 
-## Getting Started
+This is a dynamic, responsive portfolio website showcasing my skills, projects, and experience. Built with modern web technologies, it provides an engaging user experience for potential employers, collaborators, and visitors.
 
-First, run the development server:
+![Portfolio Preview](./public/images/website-preview.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Features**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Responsive Design:** Fully optimized for desktops, tablets, and mobile devices.
+- **Dark Mode Toggle:** Seamless switching between light and dark themes.
+- **Dynamic Components:** Modular and reusable components for scalability.
+- **Mobile-Friendly Navigation:** Hamburger menu with smooth transitions.
+- **Highlight Projects:** Showcasing notable projects with descriptions and links.
+- **GitHub Integration:** Quick access to my GitHub profile.
+- **Contact Form:** Easy way for visitors to get in touch.
+- **Performance Optimizations:** Prioritized assets and minimal render blocking.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Technologies Used**
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js**: React-based framework for server-side rendering and static site generation.
+- **TypeScript**: For type safety and scalability.
+- **TailwindCSS**: Utility-first CSS framework for responsive designs.
+- **React Icons**: Scalable icons for navigation and links.
+- **Framer Motion**: For seamless animations.
+- **EmailJs**: Contact form submission.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Setup Instructions**
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/shay122990/next-portfolio
+   cd next-portfolio
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and visit:
+
+   ```
+   http://localhost:3000
+   ```
+
+5. To build for production:
+   ```bash
+   npm run build
+   npm run start
+   ```
+
+---
+
+## **Components Overview**
+
+- **Navbar**:
+
+  - Dynamic navigation links.
+  - Dark mode toggle.
+  - Mobile and desktop layouts.
+
+- **Hero Section**:
+
+  - Welcoming introduction with animation.
+
+- **Projects Section**:
+
+  - List of featured projects with descriptions and links.
+
+- **Contact Form**:
+  - Simple form for visitors to connect.
+  - Integrated with EmailJS for email submissions.
+
+---
+
+## **How to Contribute**
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make changes and commit:
+   ```bash
+   git commit -m "Added a new feature"
+   ```
+4. Push changes:
+   ```bash
+   git push origin feature-name
+   ```
+5. Submit a pull request.
+
+---
+
+## **Contact**
+
+If you have any questions, suggestions, or would like to collaborate, feel free to reach out via the [contact page](#contact).
+
+---
