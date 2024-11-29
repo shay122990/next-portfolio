@@ -10,7 +10,7 @@ type TabButtonProps = {
         className={`py-2 px-6 text-lg ${
           isActive
             ? "border-2 border-green-500"
-            : "text-gray-600 hover:text-green-500"
+            : " hover:text-green-500"
         } md:px-8 lg:px-10`}
         onClick={onClick}
       >
