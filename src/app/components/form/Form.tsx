@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useId } from "react";
 import { send } from "@emailjs/browser";
 import FormInput from "../form-input/FormInput";
@@ -39,14 +40,14 @@ export default function EmailForm() {
 
     try {
       await send(
-        "service_82ksbfh",
-        "template_fpy8vcm",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "3VxZ2XS6rmTPLzTwV"
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       );
 
       setSubmissionMessage("Your message was sent successfully!");
