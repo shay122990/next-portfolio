@@ -13,19 +13,17 @@ const About = () => {
           height={200}
           className="h-60 w-60 object-cover rounded-sm"
         />
-        <div className="w-full lg:w-2/5 px-10">
-          <h2>So, who am I?</h2>
+        <div className="w-full lg:w-2/5 px-10 lg:text-left">
           <p>
+            Hi, I’m Shay,
             <br />
-            I&apos;ve always been drawn to the magic of technology and
-            design coming together. That&apos;s what led me to become a developer.
+             a passionate React Frontend Developer with a knack for transforming designs into seamless, functional websites.
             <br />
-            With a strong handle on frontend technologies, I&apos;m here to bring your
-            vision to life, blending beautiful design with seamless functionality,
-            speed, compatibility, and accessibility.
-            <br />I love keeping up with the latest trends in development and
-            design so I can always deliver the best for your company and personal
-            projects.
+            I specialize in building with React and Next.js, focusing on optimization, performance, SEO, and accessibility to create impactful user experiences. 
+            <br />
+            Through personal projects and hands-on learning, I’ve honed my ability to craft responsive, high-performance websites that meet modern web standards. I’m driven by a love for clean code and the satisfaction of delivering exceptional solutions that bring ideas to life.
+            <br />
+            I’m always eager to connect with like-minded professionals and collaborate on projects that push the boundaries of web development. Let’s create something amazing together—reach out and let’s talk!
           </p>
         </div>
       </article>
