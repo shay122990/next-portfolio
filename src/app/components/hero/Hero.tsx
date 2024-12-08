@@ -8,12 +8,13 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 gradient-bg"></div>
 
       <motion.h1
-        className="text-blue-700 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold lg:w-1/2 lg:text-left relative z-10"
+        className="text-blue-700 text-3xl md:text-4xl lg:text-8xl font-semibold lg:w-1/2 lg:text-left relative z-10"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        Hi, I&apos;m Shay... <br />A React developer in Dubai
+        <span>Hi, I&apos;m Shay...</span>
+        <span className="block mt-4">A React developer in Dubai</span> 
       </motion.h1>
 
       <motion.div
