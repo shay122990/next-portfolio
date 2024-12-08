@@ -34,9 +34,9 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
         />
       </div>
       <div className="bg-slate-200 border border-gray-300 mx-1">
-        <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
+        <p className="text-xl font-semibold text-center text-gray-800 mb-2">
           {projectName}
-        </h3>
+        </p>
         <div className="flex justify-center space-x-4">
           <a
             href={liveLink}
