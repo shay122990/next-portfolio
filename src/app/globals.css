@@ -75,11 +75,28 @@ body {
   }
 }
 .gradient-bg {
-  background-image: url("/images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(45deg, #0418fa, #00c3ff, #3b82f6, #00ff7b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* Divider Component */
 .divider-line {
   width: 60%;
