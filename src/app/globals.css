@@ -75,7 +75,12 @@ body {
   }
 }
 .gradient-bg {
-  background: linear-gradient(45deg, #1e3a8a, #14b8a6, #3b82f6, #0ea5e9);
+  background: linear-gradient(
+    229deg,
+    rgba(0, 224, 255, 1) 0%,
+    rgba(4, 59, 255, 1) 57%,
+    rgba(4, 255, 149, 1) 95%
+  );
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   position: absolute;
