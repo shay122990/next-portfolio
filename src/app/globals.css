@@ -97,6 +97,10 @@ body {
     background-position: 0% 50%;
   }
 }
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adjust values for best effect */
+}
+
 /* Divider Component */
 .divider-line {
   width: 60%;
