@@ -11,7 +11,7 @@ type TabButtonProps = {
           isActive
             ? "border-2 border-green-500"
             : " hover:text-green-500"
-        } md:px-8 lg:px-10`}
+        } md:px-8 lg:px-10 text-xs md:text-base lg:text-lg`}
         onClick={onClick}
       >
         {tab}

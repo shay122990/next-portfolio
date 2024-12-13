@@ -25,7 +25,7 @@ const projects = [
     liveLink: "https://space-tourism-shay90.netlify.app/",
     githubLink: "https://github.com/shay122990/space-tourism-website",
     altText: "Project 4",
-    projectName: "Project Four",
+    projectName: "Space Tourism",
   },
   {
     imageSrc: "/images/hero-image.jpg",

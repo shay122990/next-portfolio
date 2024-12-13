@@ -11,8 +11,8 @@ export default function ExperienceCategories() {
   const [activeTab, setActiveTab] = useState<ServiceCategory>("WebDevelopment");
 
   return (
-    <div className="w-full h-auto max-w-7xl mx-auto">
-      <div className="flex justify-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16 lg:gap-x-64">
+    <div className="w-full h-auto max-w-7xl mx-auto px-2">
+      <div className="flex justify-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16 gap-2 lg:gap-x-64">
         {Object.keys(servicesData).map((tab) => (
           <TabButton
             key={tab}
