@@ -99,7 +99,7 @@ body {
   }
 }
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adjust values for best effect */
+  text-shadow: 1px 1px 1px rgba(51, 0, 253, 0.8);
 }
 
 /* Divider Component */
