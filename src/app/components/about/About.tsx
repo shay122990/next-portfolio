@@ -1,19 +1,19 @@
 import Divider from '../divider/Divider';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 const About = () => {
   return (
     <section className="w-full flex flex-col items-center">
       <Divider text="About Me" id="about" />
       <article className="w-full px-1 flex flex-col lg:flex-row text-center items-center justify-center gap-6 lg:gap-40">
-        {/* <Image
-          src="/images/logo.gif"
+        <Image
+          src="/images/hero-image.jpg"
           alt="Profile Picture"
           width={200}
           height={200}
           className="h-60 w-60 object-cover rounded-sm"
           priority
-        /> */}
+        />
         <div className="w-full lg:w-2/5 px-10 lg:text-left">
           <p>
             Hi, I’m Shay,
