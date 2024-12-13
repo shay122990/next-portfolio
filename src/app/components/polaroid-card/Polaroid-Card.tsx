@@ -30,7 +30,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
           alt={altText}
           width={350}
           height={350}
-          className="w-full h-auto rounded-lg mb-2 border-4 border-white"
+          className="w-full h-96 rounded-lg mb-2 border-4 border-white polaroid-img"
         />
       </div>
       <div className="bg-slate-200 border border-gray-300 mx-1">
