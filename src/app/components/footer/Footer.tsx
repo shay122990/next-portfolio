@@ -5,7 +5,7 @@ export default function Footer() {
  
 
   return (
-    <footer className="bg-grey border-t border-lime-400 py-6">
+    <footer className="bg-grey border-t border-green-500 py-6 mt-4">
       <div className="container mx-auto text-center">
         <div className="flex justify-center space-x-6 mb-4">
           <Link
@@ -13,7 +13,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub Profile"
-            className="text-grey hover:text-lime-500"
+            className="text-grey hover:text-green-500"
           >
             <FaGithub size={24} />
           </Link>
@@ -22,7 +22,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn Profile"
-            className="text-grey hover:text-lime-500"
+            className="text-grey hover:text-green-500"
           >
             <FaLinkedin size={24} />
           </Link>
