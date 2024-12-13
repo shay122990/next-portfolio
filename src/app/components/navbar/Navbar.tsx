@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative">
+    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative z-10">
       {/* Mobile Menu Icon */}
       <div
         onClick={() => setNav(!nav)}
