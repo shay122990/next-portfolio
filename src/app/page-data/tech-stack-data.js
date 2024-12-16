@@ -3,75 +3,88 @@ import img2 from "../../../public/images/tech1.jpg";
 import img3 from "../../../public/images/tech1.jpg";
 import img5 from "../../../public/images/tech1.jpg";
 import img6 from "../../../public/images/tech1.jpg";
-
 const servicesData = {
   WebDevelopment: [
     {
       id: 1,
+      title: "Core Web Technologies",
       paragraph:
-        "Proficient in HTML5, CSS3, and JavaScript, with a solid understanding of their latest specifications and best practices",
+        "Proficient in HTML5, CSS3, and JavaScript, with expertise in building semantic, accessible, and performance-optimized web applications.",
       image: img1,
     },
     {
       id: 2,
+      title: "Frontend Frameworks",
       paragraph:
-        "Expertise in frontend frameworks such as React.js, enabling the development of dynamic and interactive user interfaces",
+        "Experienced in React.js and Next.js for building dynamic, interactive user interfaces and server-side rendered applications.",
       image: img2,
     },
     {
       id: 3,
+      title: "State Management",
       paragraph:
-        "Proficient in NextJs, enabling the creation of server-side rendering, ensuring faster performance",
+        "Skilled in managing state using Context API and Redux Toolkit to ensure scalability and maintainability of complex applications.",
       image: img3,
+    },
+    {
+      id: 4,
+      title: "Performance Optimization",
+      paragraph:
+        "Achieved top scores in Google Lighthouse checks by implementing techniques such as code-splitting, lazy loading, and image optimization.",
+      image: img5,
     },
   ],
   Design: [
     {
       id: 1,
+      title: "Design Tools",
       paragraph:
-        "Skilled in optimizing website performance through techniques like code minification, image optimization, and caching",
-      image: img2,
+        "Proficient in Figma for creating prototypes and wireframes, ensuring seamless transition from design to development.",
+      image: img3,
     },
     {
       id: 2,
-      paragraph: "Proficient at Figma for design prototype",
-      image: img3,
+      title: "Responsive Design",
+      paragraph:
+        "Expert in responsive design principles, delivering consistent user experiences across all devices and screen sizes.",
+      image: img5,
     },
     {
       id: 3,
+      title: "CSS Libraries & Preprocessors",
       paragraph:
-        "Expertise in responsive design, ensuring that websites adapt to different screen sizes and devices",
-      image: img3,
-    },
-    {
-      id: 4,
-      paragraph: "Expertise in various css libraries ",
-      image: img5,
+        "Experienced with popular CSS frameworks like Bootstrap, TailwindCSS, and preprocessors like SCSS to enhance styling workflows.",
+      image: img6,
     },
   ],
   TechTools: [
     {
       id: 1,
+      title: "Cloud & Deployment",
       paragraph:
-        "Understanding of SEO principles and implementation techniques to optimize websites for search engines. Prioritizing semantic code for best accessibility practices.",
-      image: img5,
+        "Experienced in deploying applications using cloud services like Firebase, Vercel, and Netlify, and configuring local servers for testing.",
+      image: img1,
     },
     {
       id: 2,
+      title: "Backend Integration",
       paragraph:
-        "Experience with WordPress development, for clients that need a simple and beautiful website within a short time.",
-      image: img6,
+        "Integrated backend services using Firebase for authentication, database management, and hosting dynamic web applications.",
+      image: img2,
     },
     {
       id: 3,
+      title: "WordPress Development",
       paragraph:
-        "Prioritizing seamless user experiences across various devices and screen sizes",
+        "Built and customized WordPress sites for clients, ensuring quick delivery and scalability.",
       image: img3,
     },
     {
       id: 4,
-      paragraph: "Proficient in Firebase authentication and data storage",
-      image: img1,
+      title: "Version Control & Collaboration",
+      paragraph:
+        "Proficient in Git for version control, ensuring seamless team collaboration and efficient code management.",
+      image: img5,
     },
   ],
 };

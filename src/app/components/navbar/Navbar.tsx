@@ -80,7 +80,7 @@ const Navbar = () => {
             alt="Logo"
             width={70}
             height={70}
-            className="cursor-pointer ml-10"
+            className="cursor-pointer"
             priority
           />
         </Link>
