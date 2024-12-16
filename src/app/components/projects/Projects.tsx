@@ -22,7 +22,7 @@ export default function Projects() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <PolaroidCard {...project} />
           </motion.div>
