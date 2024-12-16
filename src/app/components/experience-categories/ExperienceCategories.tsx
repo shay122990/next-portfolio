@@ -23,8 +23,8 @@ export default function ExperienceCategories() {
         ))}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {servicesData[activeTab].map(({ id, paragraph, image }) => (
-          <ServiceCard key={id} id={id} paragraph={paragraph} image={image} />
+        {servicesData[activeTab].map(({ id, title,  paragraph, image }) => (
+          <ServiceCard key={id} id={id} title={title} paragraph={paragraph} image={image} />
         ))}
       </div>
     </div>
