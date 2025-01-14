@@ -111,6 +111,7 @@ const Navbar = () => {
             width={50}
             height={50}
             className="cursor-pointer"
+            unoptimized
           />
         </Link>
       </div>
