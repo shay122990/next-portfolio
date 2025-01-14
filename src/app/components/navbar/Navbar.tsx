@@ -106,12 +106,11 @@ const Navbar = () => {
       <div className="md:hidden flex-1 flex justify-center ml-10">
         <Link href="/">
           <Image
-            src="/images/logo.gif"
+            src="/images/logo.webp"
             alt="Logo"
             width={50}
             height={50}
             className="cursor-pointer"
-            unoptimized
           />
         </Link>
       </div>
