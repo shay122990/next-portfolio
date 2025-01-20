@@ -76,12 +76,13 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo.gif"
+            src="/images/logo.webp"
             alt="Logo"
             width={70}
             height={70}
             className="cursor-pointer"
             priority
+            unoptimized
           />
         </Link>
 
