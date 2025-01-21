@@ -29,10 +29,10 @@ const projects = [
   },
   {
     imageSrc: "/images/hero-image.jpg",
-    liveLink: "https://example.com",
-    githubLink: "https://github.com/username/project5",
+    liveLink: "https://fitness-dashboard-nextjs.vercel.app/",
+    githubLink: "https://github.com/shay122990/fitness-dashboard-nextjs",
     altText: "Project 5",
-    projectName: "Project Five",
+    projectName: "Today - fitness dashboard",
   },
   {
     imageSrc: "/images/hero-image.jpg",
