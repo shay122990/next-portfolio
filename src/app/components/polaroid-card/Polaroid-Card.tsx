@@ -42,7 +42,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-green-500 transition duration-200"
+            className="text-gray-950 hover:text-green-500 transition duration-200"
           >
             Live
           </a>
@@ -50,7 +50,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-green-500 transition duration-200"
+            className="text-gray-950 hover:text-green-500 transition duration-200"
           >
             GitHub
           </a>
