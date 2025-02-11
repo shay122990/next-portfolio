@@ -2,10 +2,10 @@ import Image from "next/image";
 
 interface PolaroidCardProps {
   imageSrc: string;
-  liveLink: string;
-  githubLink: string;
+  liveLink?: string;
+  githubLink?: string;
   altText: string;
-  projectName: string;
+  projectName?: string;
 }
 
 const PolaroidCard: React.FC<PolaroidCardProps> = ({

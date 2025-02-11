@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
+// import Image from "next/image";
+import PolaroidCard from "../polaroid-card/Polaroid-Card";
 export default function Hero() {
   return (
     <div className="relative flex flex-row lg:flex-row justify-between items-center w-full h-80 lg:h-[35rem] px-4 lg:px-20  mt-1 lg:mt-8">
@@ -24,13 +24,9 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Image
-          src="/images/hero-image.jpg"
-          alt="developer image"
-          width={500}
-          height={500}
-          className="rounded-2xl shadow-lg shadow-pink-400/50 hero-image"
-          priority
+        <PolaroidCard
+          imageSrc="/images/hero-image.jpg"
+          altText="developer image"
         />
       </motion.div>
     </div>
