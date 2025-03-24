@@ -28,7 +28,7 @@ const projects = [
     projectName: "Space Tourism",
   },
   {
-    imageSrc: "/images/hero-image.jpg",
+    imageSrc: "/images/fitness-app.jpg",
     liveLink: "https://fitness-dashboard-nextjs.vercel.app/",
     githubLink: "https://github.com/shay122990/fitness-dashboard-nextjs",
     altText: "Project 5",
