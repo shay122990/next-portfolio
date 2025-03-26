@@ -73,7 +73,7 @@ export default function EmailForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg w-full mx-auto p-6 dark:bg-grey shadow-lg rounded-md border-[4px] border-green-400"
+      className="max-w-lg w-full mx-auto p-6 dark:bg-grey rounded border shadow-lg shadow-gray-500  dark:shadow-green-400"
     >
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700 dark:text-white">Contact Me</h2>
 
@@ -107,7 +107,7 @@ export default function EmailForm() {
         type="submit"
         disabled={isSubmitting}
         className={`w-full p-2 bg-white text-gray-700 border rounded-md font-semibold ${
-          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:border-green-500 "
+          isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:border-green-500"
         }`}
       >
         {isSubmitting ? "Sending..." : "Send Message"}

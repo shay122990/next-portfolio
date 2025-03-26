@@ -11,7 +11,7 @@ const About = () => {
           alt="Profile Picture"
           width={200}
           height={200}
-          className="w-40 h-40 lg:h-80 lg:w-80 object-cover rounded border-[4px] border-green-400"
+          className="w-40 h-40 lg:h-80 lg:w-80 object-cover rounded border shadow-md shadow-gray-500  dark:shadow-green-400"
           priority
         />
         <div className="w-full lg:w-1/2 px-2 md:px-10 text-sm lg:text-base lg:text-left ">
