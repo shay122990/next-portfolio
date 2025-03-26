@@ -126,4 +126,5 @@ body {
 /* Projects section */
 .polaroid-img {
   object-fit: cover;
+  padding-bottom: 10px;
 }

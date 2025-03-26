@@ -3,9 +3,9 @@ import Form from "../form/Form";
 
 export default function Contact() {
   return (
-    <section className="w-full">
+    <section className="w-full lg:px-10 px-4 mb-12">
       <Divider text="Get in touch" id="contact" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center min-h-[600px] px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center min-h-[600px] bg-black bg-opacity-20 rounded py-10 px-4">
         <div className="flex flex-col justify-center items-center xsm: text-center sm:text-center md:text-left">
           <h2 className="text-xl font-semibold mb-4 w-96">Let&apos;s Grab a Coffee! ☕️</h2>
           <p className="dark:text-green-400 items-center w-96">
