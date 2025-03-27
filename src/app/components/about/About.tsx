@@ -6,7 +6,7 @@ const About = () => {
     <section className="w-full flex flex-col items-center lg:px-10 px-4">
       <Divider text="About Me" id="about" />
 
-      <article className="w-full flex flex-col lg:flex-row text-center items-center justify-between gap-6 lg:px-20 px-6 py-20 rounded-lg bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-lg">
+      <article className="w-full flex flex-col lg:flex-row text-center items-center justify-between gap-6 lg:px-20 px-6 py-20 rounded-lg bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 dark:from-[#1a1a1a] dark:via-[#222] dark:to-[#1a1a1a] shadow-lg">
         <Image
           src="/images/hero-image.jpg"
           alt="Profile Picture"
