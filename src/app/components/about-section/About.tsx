@@ -13,7 +13,7 @@ const About = () => {
               alt="Polaroid 1"
               width={120}
               height={120}
-              className="w-24 h-24 lg:w-44 lg:h-40 object-cover rounded-md border-4 border-white shadow-lg"
+              className="w-32 h-32 lg:w-44 lg:h-40 object-cover rounded-md border-4 border-white shadow-lg"
             />
           </div>
           <div className="absolute top-10 right-0 rotate-6 shadow-xl">
@@ -31,7 +31,7 @@ const About = () => {
               alt="Polaroid 3"
               width={120}
               height={120}
-              className="w-24 h-24 lg:w-52 lg:h-52 object-cover rounded-md border-4 border-white shadow-lg"
+              className="w-24 h-32 lg:w-52 lg:h-52 object-cover rounded-md border-4 border-white shadow-lg"
             />
           </div>
         </div>
