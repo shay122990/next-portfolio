@@ -1,10 +1,10 @@
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
-import About from "./components/about/About";
-import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
-import Experience from "./components/experience/Experience";
+import About from "./components/about-section/About";
+import Projects from "./components/projects-section/Projects";
+import Contact from "./components/contact-section/Contact";
+import Experience from "./components/experience-section/Experience";
 export default function Home() {
   return (
     <>

@@ -5,16 +5,36 @@ const About = () => {
   return (
     <section className="w-full flex flex-col items-center lg:px-10 px-4">
       <Divider text="About Me" id="about" />
-
-      <article className="w-full flex flex-col lg:flex-row text-center items-center justify-between gap-6 lg:px-20 px-6 py-20 rounded-lg bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 dark:from-[#1a1a1a] dark:via-[#222] dark:to-[#1a1a1a] shadow-lg">
-        <Image
-          src="/images/hero-image.jpg"
-          alt="Profile Picture"
-          width={200}
-          height={200}
-          className="w-40 h-40 lg:w-80 lg:h-80 object-cover rounded-full border-4 border-gray-300 dark:border-gray-700 shadow-lg"
-          priority
-        />
+      <article className="w-full flex flex-col lg:flex-row text-center items-center justify-between gap-6 lg:px-20 px-6 py-20 rounded-lg bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 dark:from-[#1a1a1a] dark:via-[#222] dark:to-[#1a1a1a] shadow-lg relative overflow-hidden">
+        <div className="relative w-60 h-60 lg:w-96 lg:h-96 flex flex-wrap justify-center items-center gap-4">
+          <div className="absolute top-0 left-0 rotate-[-10deg] shadow-xl">
+            <Image
+              src="/images/hero-image.jpg"
+              alt="Polaroid 1"
+              width={120}
+              height={120}
+              className="w-24 h-24 lg:w-44 lg:h-40 object-cover rounded-md border-4 border-white shadow-lg"
+            />
+          </div>
+          <div className="absolute top-10 right-0 rotate-6 shadow-xl">
+            <Image
+              src="/images/hero-image.jpg"
+              alt="Polaroid 2"
+              width={120}
+              height={120}
+              className="w-24 h-24 lg:w-40 lg:h-40 object-cover rounded-md border-4 border-white shadow-lg"
+            />
+          </div>
+          <div className="absolute bottom-0 left-8 rotate-[15deg] shadow-xl">
+            <Image
+              src="/images/hero-image.jpg"
+              alt="Polaroid 3"
+              width={120}
+              height={120}
+              className="w-24 h-24 lg:w-52 lg:h-52 object-cover rounded-md border-4 border-white shadow-lg"
+            />
+          </div>
+        </div>
         <div className="w-full lg:w-1/2 px-4 md:px-10 text-sm lg:text-base text-gray-900 dark:text-gray-200 motion-safe:animate-fadeIn">
           <p className="leading-relaxed">
             <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent dark:from-green-400 dark:to-blue-400">
