@@ -11,7 +11,10 @@ export default function ExperienceCategories() {
   const [activeTab, setActiveTab] = useState<ServiceCategory>("WebDevelopment");
 
   return (
-    <div className="bg-black bg-opacity-20 p-10 rounded">
+    <div
+      className="bg-cover bg-center border border-green-400 shadow-xl p-10 rounded"
+      style={{ backgroundImage: "url('/images/experience-bg.jpg')" }}
+    >
       <div className="flex justify-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16 gap-2 lg:gap-x-64">
         {Object.keys(servicesData).map((tab) => (
           <TabButton
@@ -22,8 +25,9 @@ export default function ExperienceCategories() {
           />
         ))}
       </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {servicesData[activeTab].map(({ id, title,  paragraph, image }) => (
+        {servicesData[activeTab].map(({ id, title, paragraph, image }) => (
           <ServiceCard key={id} id={id} title={title} paragraph={paragraph} image={image} />
         ))}
       </div>
