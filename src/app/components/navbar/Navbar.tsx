@@ -36,7 +36,6 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative z-10">
-      {/* Mobile Menu Icon */}
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden"
@@ -48,14 +47,13 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Desktop Navigation */}
       <div className="hidden md:flex w-full justify-between items-center">
         {/* Left Links */}
         <ul className="flex space-x-4">
           {leftLinks.map(({ id, link, icon, label }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 dark:hover:text-green-400 duration-200 link-underline"
             >
               {icon ? (
                 <a
@@ -73,7 +71,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Logo */}
         <Link href="/">
           <Image
             src="/images/logo.webp"
@@ -92,13 +89,12 @@ const Navbar = () => {
             {rightLinks.map(({ id, link }) => (
               <li
                 key={id}
-                className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 duration-200 link-underline"
+                className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-800 dark:text-white hover:scale-105 hover:text-green-500 dark:hover:text-green-400 duration-200 link-underline"
               >
                 <Link href={`#${link}`}>{link}</Link>
               </li>
             ))}
           </ul>
-          {/* Dark Mode Toggle  */}
           <DarkModeToggle />
         </div>
       </div>
@@ -128,7 +124,7 @@ const Navbar = () => {
         {[...leftLinks, ...rightLinks].map(({ id, link, icon, label }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-105"
+            className="px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-105 hover:text-purple-600"
             onClick={() => setNav(!nav)}
           >
             {icon ? (

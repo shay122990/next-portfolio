@@ -7,7 +7,7 @@ const iconList = [FaReact, FaBolt, FaRocket, FaCodeBranch];
 
 const About = () => {
   return (
-    <section className="relative w-full px-4 lg:px-10 py-28 flex flex-col items-center justify-between">
+    <section className="relative w-full px-4 lg:px-10 py-28 flex flex-col items-center justify-between z-0">
       <Divider text="About Me" id="about" />
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute left-1/2 top-[20%] -translate-x-1/2 w-[80vw] h-[80vw] bg-cyan-300/10 dark:bg-cyan-400/10 rounded-full blur-[150px]" />
