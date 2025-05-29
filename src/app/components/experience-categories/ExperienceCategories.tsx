@@ -9,13 +9,16 @@ type ServiceCategory = keyof typeof servicesData;
 
 export default function ExperienceCategories() {
   const [activeTab, setActiveTab] = useState<ServiceCategory>("WebDevelopment");
+  const items = servicesData[activeTab];
+  const isThreeItems = items.length === 3;
+
 
   return (
     <div
-      className="bg-cover bg-center border border-green-400 shadow-xl p-10 rounded"
-      style={{ backgroundImage: "url('/images/experience-bg.jpg')" }}
+      className="bg-cover bg-center  shadow-xl pt-2 lg:pt-4 lg:mt-10 pb-20 px-4 rounded  mb-10 h-full"
+      // style={{ backgroundImage: "url('/images/experience-bg.jpg')" }}
     >
-      <div className="flex justify-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16 gap-2 lg:gap-x-64">
+      <div className="flex justify-center mb-16 md:mb-20 lg:mb-24 mt-8 md:mt-12 lg:mt-16 gap-2 lg:gap-x-64">
         {Object.keys(servicesData).map((tab) => (
           <TabButton
             key={tab}
@@ -26,9 +29,15 @@ export default function ExperienceCategories() {
         ))}
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {servicesData[activeTab].map(({ id, title, paragraph, image }) => (
-          <ServiceCard key={id} id={id} title={title} paragraph={paragraph} image={image} />
+      <div
+        className={`grid gap-10 ${
+          isThreeItems
+            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+            : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        }`}
+      >
+        {items.map(({ id, title, paragraph, Icon }) => (
+          <ServiceCard key={id} id={id} title={title} paragraph={paragraph} Icon={Icon} />
         ))}
       </div>
     </div>
