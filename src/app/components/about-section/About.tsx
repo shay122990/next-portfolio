@@ -29,7 +29,7 @@ const About = () => {
         <div className="flex-1 flex items-center">
           <div className="space-y-6 text-xl lg:text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-200 drop-shadow-sm dark:drop-shadow-[0_0_5px_rgba(0,255,255,0.2)]">
             <p>
-              I’m Shay — a front-end developer who enjoys turning ideas into clean, fast, and responsive websites. I mainly work with{" "}
+              Hi there, I’m Shay — a front-end developer <br />who enjoys turning ideas into clean, fast, and responsive websites. I mainly work with{" "}
               <span className="font-semibold text-cyan-600 dark:text-cyan-300">React</span> and{" "}
               <span className="font-semibold text-purple-600 dark:text-purple-300">Next.js</span>, and I care a lot about performance, accessibility, and good UI.
             </p>

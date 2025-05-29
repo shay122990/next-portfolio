@@ -74,6 +74,11 @@ const logos = [
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
+  {
+    id: 17,
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+  },
 ];
 
 export default logos;
