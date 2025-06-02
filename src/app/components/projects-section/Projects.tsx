@@ -11,9 +11,9 @@ const cardVariants = {
 
 export default function Projects() {
   return (
-    <section className="w-full lg:px-10 px-4">
+    <section className="w-full h-full lg:px-10 px-4 py-10">
       <Divider text="Projects" id="projects" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-6">
         {projects.map((project, index) => (
           <motion.div
             key={index}

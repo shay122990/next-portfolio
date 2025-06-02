@@ -15,10 +15,10 @@ export default function ExperienceCategories() {
 
   return (
     <div
-      className="bg-cover bg-center  shadow-xl pt-2 lg:pt-4 lg:mt-10 pb-20 px-4 rounded  mb-10 h-full"
+      className="bg-cover bg-center  pt-2 border border-green-400 lg:pt-4 lg:mt-10 pb-20 px-4 rounded  "
       // style={{ backgroundImage: "url('/images/experience-bg.jpg')" }}
     >
-      <div className="flex justify-center mb-16 md:mb-20 lg:mb-24 mt-8 md:mt-12 lg:mt-16 gap-2 lg:gap-x-64">
+      <div className="flex justify-center mb-16 md:mb-20 lg:mb-24 mt-8 md:mt-12 lg:mt-26 gap-2 lg:gap-x-64">
         {Object.keys(servicesData).map((tab) => (
           <TabButton
             key={tab}

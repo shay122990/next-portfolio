@@ -75,8 +75,20 @@ body {
     height: auto;
   }
 }
+
 .gradient-bg {
   background: linear-gradient(45deg, #0418fa, #00c3ff, #3b82f6, #00ff7b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.gradient-bg-dark {
+  background: linear-gradient(45deg, #01074d, #00c3ff, #027a95, #00ff7b);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   position: absolute;
@@ -98,9 +110,7 @@ body {
     background-position: 0% 50%;
   }
 }
-.text-shadow {
-  text-shadow: 1px 1px 1px rgba(51, 0, 253, 0.8);
-}
+
 
 /* Divider Component */
 .divider-line {
@@ -123,8 +133,4 @@ body {
 .animate-scroll {
   animation: scroll 50s linear infinite;
 }
-/* Projects section */
-.polaroid-img {
-  object-fit: cover;
-  padding-bottom: 10px;
-}
+
