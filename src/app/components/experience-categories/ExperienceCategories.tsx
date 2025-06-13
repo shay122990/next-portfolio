@@ -12,10 +12,9 @@ export default function ExperienceCategories() {
   const items = servicesData[activeTab];
   const isThreeItems = items.length === 3;
 
-
   return (
     <div
-      className="bg-cover bg-center  pt-2 border border-green-400 lg:pt-4 lg:mt-10 pb-20 px-4 rounded  "
+      className="mb-10 lg:pt-4  pb-10 px-4 "
       // style={{ backgroundImage: "url('/images/experience-bg.jpg')" }}
     >
       <div className="flex justify-center mb-16 md:mb-20 lg:mb-24 mt-8 md:mt-12 lg:mt-26 gap-2 lg:gap-x-64">
@@ -28,16 +27,22 @@ export default function ExperienceCategories() {
           />
         ))}
       </div>
-      
+
       <div
         className={`grid gap-10 ${
           isThreeItems
-            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center"
             : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         }`}
       >
         {items.map(({ id, title, paragraph, Icon }) => (
-          <ServiceCard key={id} id={id} title={title} paragraph={paragraph} Icon={Icon} />
+          <ServiceCard
+            key={id}
+            id={id}
+            title={title}
+            paragraph={paragraph}
+            Icon={Icon}
+          />
         ))}
       </div>
     </div>

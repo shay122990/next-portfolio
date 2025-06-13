@@ -4,7 +4,7 @@ import logos from "@/app/page-data/tech-icons";
 export default function LogoBanner() {
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="flex animate-scroll space-x-10">
+      <div className="flex animate-scroll space-x-10 mb-10">
         {[...Array(2)].map((_, index) => (
           <div key={index} className="flex space-x-12">
             {logos.map(({ id, imageUrl }) => (
