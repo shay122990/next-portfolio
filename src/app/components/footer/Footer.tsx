@@ -2,10 +2,8 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
- 
-
   return (
-    <footer className="bg-grey border-t border-green-500 py-6 mt-4">
+    <footer className="bg-grey border-t border-green-500 py-6">
       <div className="container mx-auto text-center">
         <div className="flex justify-center space-x-6 mb-4">
           <Link
@@ -28,8 +26,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-sm text-grey dark:text-white">
-          © Shay Development{" "}
-          <span>2024</span>. 
+          © Shay Development <span>2024</span>.
         </p>
         <p className="text-sm text-grey dark:text-white">Dubai, UAE</p>
       </div>

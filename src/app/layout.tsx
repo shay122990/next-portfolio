@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Shay Asanova",
   description: "ReactJS, NextJs developer in Dubai",
   icons: {
-    icon: "/images/favicon.ico", 
+    icon: "/images/favicon.ico",
   },
 };
 

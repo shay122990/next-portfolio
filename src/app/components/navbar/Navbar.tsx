@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full mt-2 pb-2 px-4 dark:bg-grey dark:text-white border-b border-green-500 relative z-10">
+    <div className="flex justify-between items-center w-full mt-2 py-3 px-4 dark:bg-grey dark:text-white relative z-20">
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer z-10 text-white md:hidden"

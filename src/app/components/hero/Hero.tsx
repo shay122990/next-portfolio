@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
-    <div className="relative flex flex-row lg:flex-row justify-between items-center w-full h-80 lg:h-[35rem] px-4 lg:px-20  mt-1 lg:mt-8">
+    <div className="relative flex flex-row lg:flex-row justify-between items-center w-full h-80 lg:h-[35rem] px-4 lg:px-20 z-10">
       <div className="absolute inset-0 z-0 gradient-bg dark:hidden" />
       <div className="absolute inset-0 z-0 hidden dark:block gradient-bg-dark" />
 
@@ -22,9 +22,9 @@ export default function Hero() {
         <p className="text-md sm:text-lg md:text-xl lg:text-4xl font-medium text-white">
           <Typewriter
             words={[
-              'React Developer in Dubai',
-              'Creative Front-End Engineer',
-              'Passionate Problem Solver',
+              "React Developer in Dubai",
+              "Creative Front-End Engineer",
+              "Passionate Problem Solver",
             ]}
             loop={0}
             cursor
@@ -50,22 +50,20 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-
       <motion.div
         className="mt-0 lg:mt-32 relative border rounded-lg border-lime-500"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-       
-          <Image
-            src="/images/hero-image.jpg"
-            alt="developer image"
-            width={500}
-            height={500}
-            className=" rounded-lg hero-image"
-            priority
-          />
+        <Image
+          src="/images/hero-image.jpg"
+          alt="developer image"
+          width={500}
+          height={500}
+          className=" rounded-lg hero-image"
+          priority
+        />
       </motion.div>
     </div>
   );

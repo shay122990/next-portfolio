@@ -8,15 +8,15 @@ import Experience from "./components/experience-section/Experience";
 export default function Home() {
   return (
     <>
-      <Header/>
-        <main className="flex flex-col items-center justify-center">
-          <Hero/>
-          <About/>
-          <Projects/>
-          <Experience/>
-          <Contact/>
-        </main>
-      <Footer/>
+      <Header />
+      <main className="flex flex-col items-center justify-center bg-gradient-to-br from-white to-gray-200 dark:from-[#111] dark:to-[#333] bg-opacity-40 rounded-lg">
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </>
   );
 }
