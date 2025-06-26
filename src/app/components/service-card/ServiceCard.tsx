@@ -15,7 +15,9 @@ const ServiceCard = ({ title, paragraph, Icon }: ServiceCardProps) => {
       </div>
 
       <div className="pt-14 text-center">
-        <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
+        <span className="text-lg font-bold text-gray-800 dark:text-white mb-2">
+          {title}
+        </span>
         <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
           {paragraph}
         </p>
@@ -23,6 +25,5 @@ const ServiceCard = ({ title, paragraph, Icon }: ServiceCardProps) => {
     </div>
   );
 };
-
 
 export default ServiceCard;
