@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className="w-full h-[2px] lg:w-[2px] lg:h-auto p-1 bg-gradient-to-r lg:bg-gradient-to-b from-cyan-400 to-blue-500 dark:from-cyan-300 dark:to-purple-400 animate-pulse rounded-full my-8 lg:my-0 lg:mx-8 shrink-0" />
         <div className="flex-1 flex justify-center">
-          <div className="space-y-8  lg:text-xl w-3/4  font-light leading-relaxed text-gray-900 dark:text-gray-200 drop-shadow-sm dark:drop-shadow-[0_0_5px_rgba(0,255,255,0.2)]">
+          <div className="space-y-8  lg:text-xl lg:w-3/4  font-light leading-relaxed text-gray-900 dark:text-gray-200 drop-shadow-sm dark:drop-shadow-[0_0_5px_rgba(0,255,255,0.2)]">
             <p>
               Hi there, I’m Shay — a front-end developer <br />
               who enjoys turning ideas into clean, fast, and responsive
