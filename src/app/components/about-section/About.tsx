@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section className="relative w-full px-4 lg:px-10 flex flex-col items-center justify-between z-0">
       <Divider text="About Me" id="about" />
-      <article className="relative z-10 w-full flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-20 px-6 lg:px-16 py-16">
+      <article className="relative z-10 w-full flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-20 px-6 lg:px-16 py-4">
         <div className="flex flex-row lg:flex-col justify-center items-center gap-4">
           {iconList.map((Icon, i) => (
             <div
