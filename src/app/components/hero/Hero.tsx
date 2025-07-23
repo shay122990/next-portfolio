@@ -51,7 +51,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="mt-0 lg:mt-32 relative border rounded-lg border-lime-500"
+        className="mt-0 lg:mt-32 relative shadow-lg rounded-lg"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
