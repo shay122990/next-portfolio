@@ -63,6 +63,7 @@ export default function Hero() {
           height={500}
           className=" rounded-lg hero-image"
           priority
+          unoptimized
         />
       </motion.div>
     </div>
